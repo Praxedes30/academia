@@ -22,6 +22,7 @@ public class Teste {
         new AlunoDAO().salvar(d);
         
         for (Aluno a : new AlunoDAO().listarTudo()) {
+            System.out.println(a);
 }
     }
 }

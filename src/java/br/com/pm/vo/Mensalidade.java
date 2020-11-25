@@ -7,7 +7,7 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -24,7 +24,7 @@ public class Mensalidade implements Serializable{
     private Date dataPagamento;
     private String tipoPagamento;
     private double valorPagamento;
-    @OneToMany
+    @ManyToOne
     private Aluno aluno;
 
     public int getId() {
