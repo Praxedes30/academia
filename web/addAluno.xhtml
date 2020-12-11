@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>)Adicionar Aluno </h3>
+            <p:panelGrid columns = "4" columnClasses = "p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p -col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4 "contentStyleClass =" p-align-baseline ui-fluid ">
+                <p:outputLabel for = "nome" value = "Nome:"/>
+                <p:inputText id = "nome" value="#{alunoBean.aluno.nome}"/>
+
+                    <p:outputLabel for = "sexo" value = "Sexo:" />
+                                   <p:inputText id = "sexo" value="#{alunoBean.aluno.sexo}"/>
+
+                        <p:outputLabel for = "cidade" value = "Cidade:" />
+                                       <p:inputText id = "cidade" value="#{alunoBean.aluno.cidade}"/>
+
+                           
+                                <p:outputLabel for="uf" value="UF:" />
+                                <p:selectOneMenu id="uf" style="width:125px"value="#{alunoBean.aluno.uf}"> 
+                                    <f:selectItem itemLabel="Selecione" itemValue="" />
+                                    <f:selectItem itemLabel="PA" itemValue="PA" />
+                                    <f:selectItem itemLabel="PE" itemValue="PE" />
+                                    <f:selectItem itemLabel="PB" itemValue="PB" />
+
+                                </p:selectOneMenu>
+
+                                <p:outputLabel for = "peso" value = "Peso:" />
+                                               <p:inputText id = "peso" value="#{alunoBean.aluno.peso}"/>
+
+                                    <p:outputLabel for = "altura" value = "Altura:" />
+                                                   <p:inputText id = "altura" value="#{alunoBean.aluno.peso}"/>
+
+                                        <p:outputLabel for = "tipo fisico" value = "Tipo Fisico:" />
+                                                       <p:inputText id = "tipoFisico" value="#{alunoBean.aluno.tipoFisico}"/>
+
+                                            <p:outputLabel for = "indice de gordura" value = "Indice de Gordura Corporal:" />
+                                                           <p:inputText id = "indiceGorduraCorporal" value="#{alunoBean.aluno.indiceGorduraCorporal}"/>
+
+
+                                                <p:outputLabel for = "telefone" value = "TELEFONE:"/>
+                                                <p:inputMask id = "telefone" mask = "(999) 999-9999" value="#{alunoBean.aluno.telefone}"/>
+
+                                                   
+
+                                                            <p:outputLabel for = "cpf" value = "CPF:" />
+                                                            <p:inputMask id="cpf" mask="999.999.999-99" value="#{alunoBean.aluno.cpf}"/>
+
+                                                                    <p:outputLabel for = "date" value = "Data de Nascimento"/>
+                                                                    <p:datePicker id = "date" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
+
+                                                                    <p:commandButton value=" Salvar" action="#{alunoBean.aluno.salva()}"/>
+                                                                </p:panelGrid></font></font><font></font>
+
+                                                        </h:form>
+                                                        </h:body>
+                                                        </html>
+
