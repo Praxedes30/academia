@@ -10,7 +10,7 @@
     <h:body>
         <h:form>
             <h3>)Adicionar Aluno </h3>
-            <p:panelGrid columns = "4" columnClasses = "p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p -col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4 "contentStyleClass =" p-align-baseline ui-fluid ">
+            <p:panelGrid columns = "4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p -col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4 "contentStyleClass =" p-align-baseline ui-fluid" >
                 <p:outputLabel for = "nome" value = "Nome:"/>
                 <p:inputText id = "nome" value="#{alunoBean.aluno.nome}"/>
 
@@ -21,13 +21,6 @@
                                        <p:inputText id = "cidade" value="#{alunoBean.aluno.cidade}"/>
 
                            
-                                <p:outputLabel for="uf" value="UF:" />
-                                <p:selectOneMenu id="uf" style="width:125px"value="#{alunoBean.aluno.uf}"> 
-                                    <f:selectItem itemLabel="Selecione" itemValue="" />
-                                    <f:selectItem itemLabel="PA" itemValue="PA" />
-                                    <f:selectItem itemLabel="PE" itemValue="PE" />
-                                    <f:selectItem itemLabel="PB" itemValue="PB" />
-
                                 </p:selectOneMenu>
 
                                 <p:outputLabel for = "peso" value = "Peso:" />
@@ -55,7 +48,7 @@
                                                                     <p:datePicker id = "date" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
 
                                                                     <p:commandButton value=" Salvar" action="#{alunoBean.aluno.salva()}"/>
-                                                                </p:panelGrid></font></font><font></font>
+                                                                </p:panelGrid>
 
                                                         </h:form>
                                                         </h:body>
