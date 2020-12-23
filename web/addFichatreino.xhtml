@@ -8,8 +8,8 @@
     </h:head>
     <h:body>
         <h:form>
-            <h3>)Adicionar Ficha Treino </h3>
-            <p:panelGrid columns = "4" columnClasses = "p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p -col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4 "contentStyleClass =" p-align-baseline ui-fluid ">
+            <h3>Adicionar Ficha Treino </h3>
+            <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
                 <p:outputLabel for = "aluno" value = "Aluno:"/>
                 <p:inputText id = "aluno" value="#{fichatreinoBean.fichatreino.aluno}"/>
 
@@ -24,7 +24,7 @@
                 <p:datePicker id = "dataFeita" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
 
                 <p:commandButton value=" Salvar" action="#{fichatreinooBean.fichatreino.salva()}"/>
-            </p:panelGrid></font></font><font></font>
+            </p:panelGrid>
 
         </h:form>
     </h:body>

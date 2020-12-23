@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Listar Aluno</title>
+    </h:head>
+    <h:body>
+        <h:form    
+            <p:dataTable var="aluno" value="#{alunoBean.listar()}" >
+             <p:column headerText="Id">
+            <h:outputText value="#{aluno.id}" />
+            </p:column>
+                
+             <p:column headerText="Nome">
+            <h:outputText value="#{aluno.nome}" />
+            </p:column>
+                    
+             <p:column headerText="CPF">
+                 <h:outputText value="#{aluno.cpf}" />
+            </p:column>
+                        
+             <p:column headerText="Altura">
+                 <h:outputText value="#{aluno.altura}" />
+            </p:column>
+                <p:column headerText="Peso">
+                    <h:outputText value="#{aluno.peso}" />
+            </p:column>
+                <p:column headerText="Idade">
+                    <h:outputText value="#{aluno.idade}" />
+            </p:column>
+                <p:column headerText="Sexo">
+                    <h:outputText value="#{aluno.sexo}" />
+                    
+                    <p:column headerText="Cidade">
+                        <h:outputText value="#{aluno.cidade}" />
+            </p:column>
+                    <p:column headerText="Telefone">
+                        <h:outputText value="#{aluno.telefone}" />
+                 
+                 <p:column headerText="IndiceGorduraCorporal">
+                     <h:outputText value="#{aluno.indiceGorduraCorporal}" />
+            </p:column>
+                 <p:column headerText="TipoFisico">
+                     <h:outputText value="#{aluno.tipoFisico}" />
+            </p:column>
+            </p:column>
+            </p:column>
+        </h:form>
+    </h:body>
+</html>
+

@@ -3,6 +3,7 @@ package br.com.pm.bean;
 
 import br.com.pm.dao.AlunoDAO;
 import br.com.pm.vo.Aluno;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -30,4 +31,9 @@ public class AlunoBean{
         return "index.xhtml";
     }
     
+    public List<Aluno> listar(){
+     return   new AlunoDAO().listarTudo();
+        
+    }
+
 }

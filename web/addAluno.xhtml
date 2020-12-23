@@ -9,8 +9,8 @@
     </h:head>
     <h:body>
         <h:form>
-            <h3>)Adicionar Aluno </h3>
-            <p:panelGrid columns = "4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p -col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4 "contentStyleClass =" p-align-baseline ui-fluid" >
+            <h3>Adicionar Aluno </h3>
+            <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
                 <p:outputLabel for = "nome" value = "Nome:"/>
                 <p:inputText id = "nome" value="#{alunoBean.aluno.nome}"/>
 
@@ -21,7 +21,7 @@
                                        <p:inputText id = "cidade" value="#{alunoBean.aluno.cidade}"/>
 
                            
-                                </p:selectOneMenu>
+
 
                                 <p:outputLabel for = "peso" value = "Peso:" />
                                                <p:inputText id = "peso" value="#{alunoBean.aluno.peso}"/>
@@ -29,15 +29,15 @@
                                     <p:outputLabel for = "altura" value = "Altura:" />
                                                    <p:inputText id = "altura" value="#{alunoBean.aluno.peso}"/>
 
-                                        <p:outputLabel for = "tipo fisico" value = "Tipo Fisico:" />
-                                                       <p:inputText id = "tipoFisico" value="#{alunoBean.aluno.tipoFisico}"/>
+                                        <p:outputLabel for = "tipoFisico" value = "Tipo Fisico:" />
+                                        <p:inputText id = "tipoFisico" value="#{alunoBean.aluno.tipoFisico}"/>
 
-                                            <p:outputLabel for = "indice de gordura" value = "Indice de Gordura Corporal:" />
+                                            <p:outputLabel for = "indiceGorduraCorporal" value = "Indice de Gordura Corporal:" />
                                                            <p:inputText id = "indiceGorduraCorporal" value="#{alunoBean.aluno.indiceGorduraCorporal}"/>
 
 
-                                                <p:outputLabel for = "telefone" value = "TELEFONE:"/>
-                                                <p:inputMask id = "telefone" mask = "(999) 999-9999" value="#{alunoBean.aluno.telefone}"/>
+                                                <p:outputLabel for = "telefone" value = "Telefone:"/>
+                                                <p:inputMask id = "telefone" mask = "(99) 999-9999" value="#{alunoBean.aluno.telefone}"/>
 
                                                    
 

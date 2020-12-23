@@ -8,22 +8,22 @@
     </h:head>
     <h:body>
         <h:form>
-            <h3>)Adicionar Temporada </h3>
-            <p:panelGrid columns = "4" columnClasses = "p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p -col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4 "contentStyleClass =" p-align-baseline ui-fluid ">
+            <h3>Adicionar Temporada </h3>
+            <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
                 <p:outputLabel for = "aluno" value = "Aluno:"/>
                 <p:inputText id = "aluno" value="#{temporadaBean.temporada.aluno}"/>
 
                 <p:outputLabel for = "personal" value = "Personal:" />
                 <p:inputText id = "personal" value="#{temporadaBean.temporada.personal}"/>
 
-                <p:outputLabel for = "date" value = "Data de Inicio"/>
+                <p:outputLabel for = "dataInicio" value = "Data de Inicio"/>
                 <p:datePicker id = "dataInicio" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
                 
-                <p:outputLabel for = "date" value = "Data Final"/>
+                <p:outputLabel for = "dataFim" value = "Data Final"/>
                 <p:datePicker id = "dataFim" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
 
                 <p:commandButton value=" Salvar" action="#{temporadaBean.temporada.salva()}"/>
-            </p:panelGrid></font></font><font></font>
+            </p:panelGrid>
 
         </h:form>
     </h:body>
