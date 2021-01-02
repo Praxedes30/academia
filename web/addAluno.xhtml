@@ -14,28 +14,11 @@
                 <p:outputLabel for = "nome" value = "Nome:"/>
                 <p:inputText id = "nome" value="#{alunoBean.aluno.nome}"/>
 
-                    <p:outputLabel for = "sexo" value = "Sexo:" />
-                                   <p:inputText id = "sexo" value="#{alunoBean.aluno.sexo}"/>
+                   
+                        <p:outputLabel for = "endereco" value = "Endereço:" />
+                                       <p:inputText id = "endereco" value="#{alunoBean.aluno.endereco}"/>
 
-                        <p:outputLabel for = "cidade" value = "Cidade:" />
-                                       <p:inputText id = "cidade" value="#{alunoBean.aluno.cidade}"/>
-
-                           
-
-
-                                <p:outputLabel for = "peso" value = "Peso:" />
-                                               <p:inputText id = "peso" value="#{alunoBean.aluno.peso}"/>
-
-                                    <p:outputLabel for = "altura" value = "Altura:" />
-                                                   <p:inputText id = "altura" value="#{alunoBean.aluno.peso}"/>
-
-                                        <p:outputLabel for = "tipoFisico" value = "Tipo Fisico:" />
-                                        <p:inputText id = "tipoFisico" value="#{alunoBean.aluno.tipoFisico}"/>
-
-                                            <p:outputLabel for = "indiceGorduraCorporal" value = "Indice de Gordura Corporal:" />
-                                                           <p:inputText id = "indiceGorduraCorporal" value="#{alunoBean.aluno.indiceGorduraCorporal}"/>
-
-
+                         
                                                 <p:outputLabel for = "telefone" value = "Telefone:"/>
                                                 <p:inputMask id = "telefone" mask = "(99) 999-9999" value="#{alunoBean.aluno.telefone}"/>
 
@@ -47,7 +30,7 @@
                                                                     <p:outputLabel for = "date" value = "Data de Nascimento"/>
                                                                     <p:datePicker id = "date" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
 
-                                                                    <p:commandButton value=" Salvar" action="#{alunoBean.aluno.salva()}"/>
+                                                                    <p:commandButton value="Salvar" action="#{alunoBean.aluno.salva()}"/>
                                                                 </p:panelGrid>
 
                                                         </h:form>

@@ -15,14 +15,10 @@ public class Aluno implements Serializable{
  private int id;
  private String cpf;
  private String nome;
- private double altura;
- private double peso;
  private int idade;
- private String sexo ;
- private String cidade; 
+ private String endereco; 
  private String telefone ;
- private double indiceGorduraCorporal;
- private String tipoFisico ;
+
  
 
     public int getId() {
@@ -49,21 +45,14 @@ public class Aluno implements Serializable{
         this.nome = nome;
     }
 
-    public double getAltura() {
-        return altura;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
-    }
 
     public int getIdade() {
         return idade;
@@ -71,22 +60,6 @@ public class Aluno implements Serializable{
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
     }
 
     public String getTelefone() {
@@ -97,38 +70,15 @@ public class Aluno implements Serializable{
         this.telefone = telefone;
     }
 
-    public double getIndiceGorduraCorporal() {
-        return indiceGorduraCorporal;
-    }
-
-    public void setIndiceGorduraCorporal(double indiceGorduraCorporal) {
-        this.indiceGorduraCorporal = indiceGorduraCorporal;
-    }
-
-    public String getTipoFisico() {
-        return tipoFisico;
-    }
-
-    public void setTipoFisico(String tipoFisico) {
-        this.tipoFisico = tipoFisico;
-    }
-
-
-
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + this.id;
-        hash = 17 * hash + Objects.hashCode(this.cpf);
-        hash = 17 * hash + Objects.hashCode(this.nome);
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.altura) ^ (Double.doubleToLongBits(this.altura) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.peso) ^ (Double.doubleToLongBits(this.peso) >>> 32));
-        hash = 17 * hash + this.idade;
-        hash = 17 * hash + Objects.hashCode(this.sexo);
-        hash = 17 * hash + Objects.hashCode(this.cidade);
-        hash = 17 * hash + Objects.hashCode(this.telefone);
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.indiceGorduraCorporal) ^ (Double.doubleToLongBits(this.indiceGorduraCorporal) >>> 32));
-        hash = 17 * hash + Objects.hashCode(this.tipoFisico);
+        int hash = 7;
+        hash = 47 * hash + this.id;
+        hash = 47 * hash + Objects.hashCode(this.cpf);
+        hash = 47 * hash + Objects.hashCode(this.nome);
+        hash = 47 * hash + this.idade;
+        hash = 47 * hash + Objects.hashCode(this.endereco);
+        hash = 47 * hash + Objects.hashCode(this.telefone);
         return hash;
     }
 
@@ -147,16 +97,7 @@ public class Aluno implements Serializable{
         if (this.id != other.id) {
             return false;
         }
-        if (Double.doubleToLongBits(this.altura) != Double.doubleToLongBits(other.altura)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.peso) != Double.doubleToLongBits(other.peso)) {
-            return false;
-        }
         if (this.idade != other.idade) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.indiceGorduraCorporal) != Double.doubleToLongBits(other.indiceGorduraCorporal)) {
             return false;
         }
         if (!Objects.equals(this.cpf, other.cpf)) {
@@ -165,16 +106,10 @@ public class Aluno implements Serializable{
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
-        if (!Objects.equals(this.sexo, other.sexo)) {
-            return false;
-        }
-        if (!Objects.equals(this.cidade, other.cidade)) {
+        if (!Objects.equals(this.endereco, other.endereco)) {
             return false;
         }
         if (!Objects.equals(this.telefone, other.telefone)) {
-            return false;
-        }
-        if (!Objects.equals(this.tipoFisico, other.tipoFisico)) {
             return false;
         }
         return true;
@@ -182,13 +117,7 @@ public class Aluno implements Serializable{
 
     @Override
     public String toString() {
-        return  nome;
+        return  nome  ;
     }
 
-   
-    }
-
-   
- 
- 
-
+}

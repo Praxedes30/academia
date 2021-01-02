@@ -46,8 +46,7 @@ public class AlunoBean{
         this.aluno = aluno;
     }
     
-    public String salvar(){
-        
+    public String salvar(){   
         new AlunoDAO().salvar(this.aluno);
         return "index.xhtml";
     }
