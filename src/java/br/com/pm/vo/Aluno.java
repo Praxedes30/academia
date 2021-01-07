@@ -15,7 +15,7 @@ public class Aluno implements Serializable{
  private int id;
  private String cpf;
  private String nome;
- private int idade;
+ private int datadenascimeto;
  private String endereco; 
  private String telefone ;
 
@@ -54,12 +54,12 @@ public class Aluno implements Serializable{
     }
 
 
-    public int getIdade() {
-        return idade;
+    public int getDatadenascimeto() {
+        return datadenascimeto;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setDatadenascimeto(int datadenascimeto) {
+        this.datadenascimeto = datadenascimeto;
     }
 
     public String getTelefone() {
@@ -76,7 +76,7 @@ public class Aluno implements Serializable{
         hash = 47 * hash + this.id;
         hash = 47 * hash + Objects.hashCode(this.cpf);
         hash = 47 * hash + Objects.hashCode(this.nome);
-        hash = 47 * hash + this.idade;
+        hash = 47 * hash + this.datadenascimeto;
         hash = 47 * hash + Objects.hashCode(this.endereco);
         hash = 47 * hash + Objects.hashCode(this.telefone);
         return hash;
@@ -97,7 +97,7 @@ public class Aluno implements Serializable{
         if (this.id != other.id) {
             return false;
         }
-        if (this.idade != other.idade) {
+        if (this.datadenascimeto != other.datadenascimeto) {
             return false;
         }
         if (!Objects.equals(this.cpf, other.cpf)) {

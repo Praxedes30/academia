@@ -46,7 +46,6 @@ public class PersonaltrainerBean {
         this.personaltrainer = personaltrainer;
     }
     public String salvar(){
-        
         new PersonaltrainerDAO().salvar(this.personaltrainer);
         return "index.xhtml";
     }

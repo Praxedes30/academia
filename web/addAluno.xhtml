@@ -27,10 +27,10 @@
                                                             <p:outputLabel for = "cpf" value = "CPF:" />
                                                             <p:inputMask id="cpf" mask="999.999.999-99" value="#{alunoBean.aluno.cpf}"/>
 
-                                                                    <p:outputLabel for = "date" value = "Data de Nascimento"/>
+                                                                    <p:outputLabel for = "date" value = "Data de Nascimento:"/>
                                                                     <p:datePicker id = "date" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
 
-                                                                    <p:commandButton value="Salvar" action="#{alunoBean.aluno.salva()}"/>
+                                                                    <p:commandButton value="Salvar" action="#{alunoBean.salvar()}"/>
                                                                 </p:panelGrid>
 
                                                         </h:form>

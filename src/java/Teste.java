@@ -11,7 +11,7 @@ public class Teste {
      Aluno d = new Aluno();
         d.setNome("aaaa");
         d.setCpf("zzzz");
-        d.setIdade(18);
+        d.setDatadenascimeto(12/12/1212);
         d.setTelefone("11");
         d.setEndereco("az");
         new AlunoDAO().salvar(d);
