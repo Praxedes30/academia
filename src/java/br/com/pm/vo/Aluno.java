@@ -18,6 +18,9 @@ public class Aluno implements Serializable{
  private int datadenascimeto;
  private String endereco; 
  private String telefone ;
+ private String nomeCE;
+ private String enderecoCE;
+ private String telefoneCE;
 
  
 
@@ -70,6 +73,32 @@ public class Aluno implements Serializable{
         this.telefone = telefone;
     }
 
+    public String getNomeCE() {
+        return nomeCE;
+    }
+
+    public void setNomeCE(String nomeCE) {
+        this.nomeCE = nomeCE;
+    }
+
+    public String getEnderecoCE() {
+        return enderecoCE;
+    }
+
+    public void setEnderecoCE(String enderecoCE) {
+        this.enderecoCE = enderecoCE;
+    }
+
+    public String getTelefoneCE() {
+        return telefoneCE;
+    }
+
+    public void setTelefoneCE(String telefoneCE) {
+        this.telefoneCE = telefoneCE;
+    }
+    
+    
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -79,6 +108,9 @@ public class Aluno implements Serializable{
         hash = 47 * hash + this.datadenascimeto;
         hash = 47 * hash + Objects.hashCode(this.endereco);
         hash = 47 * hash + Objects.hashCode(this.telefone);
+        hash = 47 * hash + Objects.hashCode(this.nomeCE);
+        hash = 47 * hash + Objects.hashCode(this.enderecoCE);
+        hash = 47 * hash + Objects.hashCode(this.telefoneCE);
         return hash;
     }
 
@@ -110,6 +142,15 @@ public class Aluno implements Serializable{
             return false;
         }
         if (!Objects.equals(this.telefone, other.telefone)) {
+            return false;
+        }
+        if (!Objects.equals(this.nomeCE, other.nomeCE)) {
+            return false;
+        }
+        if (!Objects.equals(this.enderecoCE, other.enderecoCE)) {
+            return false;
+        }
+        if (!Objects.equals(this.telefoneCE, other.telefoneCE)) {
             return false;
         }
         return true;

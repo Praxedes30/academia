@@ -16,29 +16,32 @@
                  emptyMessage="Não foi encontrado nenhum aluno com essas especificações" 
                  filteredValue="#{alunoBean.listaFiltrada}"
                 > 
-             <p:column headerText="Id">
-            <h:outputText value="#{aluno.id}" />
+            <p:column headerText="Id">
+                <h:outputText value="#{aluno.id}" />
+            </p:column>                
+            <p:column headerText="Nome" filterBy="#{aluno.nome}" filterMatchMode="contains">
+                <h:outputText value="#{aluno.nome}" />
+            </p:column>                    
+            <p:column headerText="CPF">
+                <h:outputText value="#{aluno.cpf}" />
             </p:column>
-                
-                <p:column headerText="Nome" filterBy="#{aluno.nome}" filterMatchMode="contains">
-            <h:outputText value="#{aluno.nome}" />
+            <p:column headerText="Data de Nascimento">
+                <h:outputText value="#{aluno.datadenascimeto}" />
+            </p:column>               
+            <p:column headerText="Endereço">
+                <h:outputText value="#{aluno.endereco}" />
             </p:column>
-                    
-             <p:column headerText="CPF">
-                 <h:outputText value="#{aluno.cpf}" />
+            <p:column headerText="Telefone">
+                <h:outputText value="#{aluno.telefone}" />    
             </p:column>
-                        
-           
-                <p:column headerText="Idade">
-                    <h:outputText value="#{aluno.datadenascimeto}" />
+            <p:column headerText="Nome">
+                <h:outputText value="#{aluno.nomeCE}" />
+            </p:column> 
+            <p:column headerText="Endereço">
+                <h:outputText value="#{aluno.enderecoCE}" />
             </p:column>
-               
-                    <p:column headerText="Endereço">
-                        <h:outputText value="#{aluno.endereco}" />
-            </p:column>
-                    <p:column headerText="Telefone">
-                        <h:outputText value="#{aluno.telefone}" />
-                 
+            <p:column headerText="Telefone">
+                <h:outputText value="#{aluno.telefoneCE}" />
             </p:column>
             
            

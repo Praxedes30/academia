@@ -2,10 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Cadastrar Aluno</title>
     </h:head>
     <h:body>
         <h:form>
@@ -14,26 +13,34 @@
                 <p:outputLabel for = "nome" value = "Nome:"/>
                 <p:inputText id = "nome" value="#{alunoBean.aluno.nome}"/>
 
-                   
-                        <p:outputLabel for = "endereco" value = "Endereço:" />
-                                       <p:inputText id = "endereco" value="#{alunoBean.aluno.endereco}"/>
-
+                <p:outputLabel for = "endereco" value = "Endereço:" />
+                <p:inputText id = "endereco" value="#{alunoBean.aluno.endereco}"/>
                          
-                                                <p:outputLabel for = "telefone" value = "Telefone:"/>
-                                                <p:inputMask id = "telefone" mask = "(99) 999-9999" value="#{alunoBean.aluno.telefone}"/>
+                <p:outputLabel for = "telefone" value = "Telefone:"/>
+                <p:inputMask id = "telefone" mask = "(99) 99999-9999" value="#{alunoBean.aluno.telefone}"/>
 
-                                                   
+                <p:outputLabel for = "cpf" value = "CPF:" />
+                <p:inputMask id="cpf" mask="999.999.999-99" value="#{alunoBean.aluno.cpf}"/>
 
-                                                            <p:outputLabel for = "cpf" value = "CPF:" />
-                                                            <p:inputMask id="cpf" mask="999.999.999-99" value="#{alunoBean.aluno.cpf}"/>
+                <p:outputLabel for = "datadenascimento" value = "Data de Nascimento:"/>
+                <p:datePicker id = "datadenascimento" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
 
-                                                                    <p:outputLabel for = "date" value = "Data de Nascimento:"/>
-                                                                    <p:datePicker id = "date" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
+            </p:panelGrid>
+        </h:form>
+        <h:form>
+            <h3>Contato de Emergência </h3>
+            <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
+                <p:outputLabel for = "nomeCE" value = "Nome:"/>
+                <p:inputText id = "nomeCE" value="#{alunoBean.aluno.nomeCE}"/>
 
-                                                                    <p:commandButton value="Salvar" action="#{alunoBean.salvar()}"/>
-                                                                </p:panelGrid>
-
-                                                        </h:form>
-                                                        </h:body>
-                                                        </html>
+                <p:outputLabel for = "enderecoCE" value = "Endereço:" />
+                <p:inputText id = "enderecoCE" value="#{alunoBean.aluno.enderecoCE}"/>
+                         
+                <p:outputLabel for = "telefoneCE" value = "Telefone:"/>
+                <p:inputMask id = "telefoneCE" mask = "(99) 99999-9999" value="#{alunoBean.aluno.telefoneCE}"/>
+            </p:panelGrid>
+        </h:form>
+        <p:commandButton value="Salvar" action="#{alunoBean.salvar()}"/>
+    </h:body>
+</html>
 

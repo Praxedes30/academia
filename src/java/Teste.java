@@ -1,6 +1,5 @@
 
 import br.com.pm.dao.AlunoDAO;
-import br.com.pm.dao.HibernateUtil;
 import br.com.pm.vo.Aluno;
 
 
