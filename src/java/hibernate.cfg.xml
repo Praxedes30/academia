@@ -48,11 +48,8 @@ Contributor(s):
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="br.com.pm.vo.Aluno" />
     <mapping class="br.com.pm.vo.Mensalidade" />
-    <mapping class="br.com.pm.vo.Avaliacaofisica" />
     <mapping class="br.com.pm.vo.Exercicio" />
-    <mapping class="br.com.pm.vo.Fichatreino" />
-    <mapping class="br.com.pm.vo.Personaltrainer" />
     <mapping class="br.com.pm.vo.Temporada" />
-    <mapping class="br.com.pm.vo.Treino" />
+
   </session-factory>
 </hibernate-configuration>

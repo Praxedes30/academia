@@ -33,9 +33,7 @@
             <p:menubar>
         <p:submenu label="Cadastrar" >
             <p:menuitem value="Aluno" url="addAluno.xhtml" />
-            <p:separator />
-            <p:menuitem value="Personal Trainer" url="#" />
-            
+         
         </p:submenu>
  
         <p:submenu label="Mensalidades" >
@@ -57,18 +55,7 @@
                 <p:menuitem value="Arquivo" url="#" />
             </p:submenu>
         </p:submenu>
- 
-        <p:submenu label="Ações" >
-            <p:submenu label="Ajax" >
-                <p:menuitem value="Save" action="#{menuView.save}"  update="messages"/>
-                <p:menuitem value="Update" action="#{menuView.update}"  update="messages"/>
-            </p:submenu>
-            <p:submenu label="Non-Ajax" >
-                <p:menuitem value="Delete" action="#{menuView.delete}"  update="messages" ajax="false"/>
-            </p:submenu>
-        </p:submenu>
- 
-        
+     
     </p:menubar>
 </h:form>
         

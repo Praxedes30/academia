@@ -2,10 +2,13 @@
 package br.com.pm.vo;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Aluno implements Serializable{
@@ -15,7 +18,8 @@ public class Aluno implements Serializable{
  private int id;
  private String cpf;
  private String nome;
- private int datadenascimeto;
+ @Temporal(TemporalType.DATE)
+ private Date datadenascimento;
  private String endereco; 
  private String telefone ;
  private String nomeCE;
@@ -47,6 +51,17 @@ public class Aluno implements Serializable{
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+      public Date getDatadenascimento() {
+        return datadenascimento;
+    
+    }
+     
+     public void setDatadenascimento(Date datadenascimento) {
+        this.datadenascimento = datadenascimento;
+
+    }
+  
 
     public String getEndereco() {
         return endereco;
@@ -56,14 +71,6 @@ public class Aluno implements Serializable{
         this.endereco = endereco;
     }
 
-
-    public int getDatadenascimeto() {
-        return datadenascimeto;
-    }
-
-    public void setDatadenascimeto(int datadenascimeto) {
-        this.datadenascimeto = datadenascimeto;
-    }
 
     public String getTelefone() {
         return telefone;
@@ -105,7 +112,7 @@ public class Aluno implements Serializable{
         hash = 47 * hash + this.id;
         hash = 47 * hash + Objects.hashCode(this.cpf);
         hash = 47 * hash + Objects.hashCode(this.nome);
-        hash = 47 * hash + this.datadenascimeto;
+        hash = 47 * hash + Objects.hashCode(this.datadenascimento);
         hash = 47 * hash + Objects.hashCode(this.endereco);
         hash = 47 * hash + Objects.hashCode(this.telefone);
         hash = 47 * hash + Objects.hashCode(this.nomeCE);
@@ -129,7 +136,7 @@ public class Aluno implements Serializable{
         if (this.id != other.id) {
             return false;
         }
-        if (this.datadenascimeto != other.datadenascimeto) {
+        if (this.datadenascimento != other.datadenascimento) {
             return false;
         }
         if (!Objects.equals(this.cpf, other.cpf)) {

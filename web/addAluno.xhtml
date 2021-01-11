@@ -22,25 +22,27 @@
                 <p:outputLabel for = "cpf" value = "CPF:" />
                 <p:inputMask id="cpf" mask="999.999.999-99" value="#{alunoBean.aluno.cpf}"/>
 
-                <p:outputLabel for = "datadenascimento" value = "Data de Nascimento:"/>
-                <p:datePicker id = "datadenascimento" showIcon = "true" style = "width: auto" pattern="dd/MM/yyyy"/>
+               <p:outputLabel for="data" value="Data de Nascimento:" />
+                <p:datePicker id="data" showIcon="true" style="width:auto" pattern="dd/MM/yyyy" value="#{alunoBean.aluno.datadenascimento}"/>
+                
 
             </p:panelGrid>
-        </h:form>
-        <h:form>
+       
             <h3>Contato de Emergência </h3>
             <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
                 <p:outputLabel for = "nomeCE" value = "Nome:"/>
                 <p:inputText id = "nomeCE" value="#{alunoBean.aluno.nomeCE}"/>
-
+                
                 <p:outputLabel for = "enderecoCE" value = "Endereço:" />
                 <p:inputText id = "enderecoCE" value="#{alunoBean.aluno.enderecoCE}"/>
-                         
+
                 <p:outputLabel for = "telefoneCE" value = "Telefone:"/>
                 <p:inputMask id = "telefoneCE" mask = "(99) 99999-9999" value="#{alunoBean.aluno.telefoneCE}"/>
+                
+                <p:commandButton value="Salvar" action="#{alunoBean.salvar()}"/>
+                
             </p:panelGrid>
         </h:form>
-        <p:commandButton value="Salvar" action="#{alunoBean.salvar()}"/>
     </h:body>
 </html>
 
