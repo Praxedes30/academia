@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Agendar Horário</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>Adicionar Horário</h3>
+             <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
+                <p:outputLabel for = "nome" value = "Nome:"/>
+                <p:inputText id = "nome" value="#{agendamentoBean.agendamento.nome}"/>
+                
+                <p:outputLabel for="descricao" value="Descrição:"/>
+                <p:inputText id="descricao" value="#{agendamentoBean.agendamento.descricao}"/>
+                             
+                <p:outputLabel for="dataMarcada" value="Data:" />
+                <p:datePicker id="dataMarcada" showIcon="true" style="width:auto" pattern="dd/MM/yyyy" value="#{agendamentoBean.agendamento.dataMarcada}"/>
+                
+                <p:outputLabel for="horaChegada" value="Hora de Entrada:" />
+                <p:calendar id="horaChegada" timeOnly="true" pattern="HH:mm:ss" value="#{agendamentoBean.agendamento.horaChegada}"/>
+                
+                <p:outputLabel for="horaSaida" value="Hora de Saída:" />
+                <p:calendar id="horaSaida" timeOnly="true" pattern="HH:mm:ss" value="#{agendamentoBean.agendamento.horaSaida}"/>
+                
+                <p:commandButton value="Salvar" action="#{agendamentoBean.salvar()}"/>
+                
+             </p:panelGrid>                
+        </h:form>        
+    </h:body>
+</html>

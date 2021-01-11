@@ -51,6 +51,11 @@ public class AlunoBean{
         return "index.xhtml";
     }
     
+    public String remover(){
+        new AlunoDAO().remover(this.aluno);
+        return "listAluno.xhtml";
+    }
+    
     public List<Aluno> listar(){
      return  new AlunoDAO().listarTudo();
         
