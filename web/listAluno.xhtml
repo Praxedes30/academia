@@ -7,14 +7,18 @@
         <title>Alunos Matriculados</title>
     </h:head>
     <h:body>
-        <h:form>   
-            <p:dataTable var="aluno" value="#{alunoBean.listar()}"  rows="25"
+        <h:form>  
+            <p:growl id="message" showDetail="true" />
+    
+         
+            <p:dataTable var="aluno" value="#{alunoBean.lista}"  rows="25"
                  paginator="true"
                  paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                  currentPageReportTemplate="{startRecord}-{endRecord} de {totalRecords} alunos"
                  rowsPerPageTemplate="1,10,25"
                  emptyMessage="Não foi encontrado nenhum aluno com essas especificações" 
                  filteredValue="#{alunoBean.listaFiltrada}"
+                 selectionMode="single" selection="#{alunoBean.alunoSelecionado}" rowKey="#{aluno.id}
                 > 
             <p:column headerText="Id">
                 <h:outputText value="#{aluno.id}" />
@@ -45,6 +49,15 @@
             </p:column>
            
             </p:dataTable>
+            
+            <p:commandButton value="Remover" action="#{alunoBean.remover()}" update="message, table">
+            <p:confirm header="Remover Aluno" message="Você realmente deseja remover esse aluno" icon="pi pi-exclamation-triangle" />
+            </p:commandButton>
+            
+            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Sim" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+        <p:commandButton value="Não" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times" />
+       </p:confirmDialog> 
         </h:form>
     </h:body>
 </html>

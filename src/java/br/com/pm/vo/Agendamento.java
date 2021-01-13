@@ -1,23 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.pm.vo;
 
 import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
 import java.util.Objects;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/**
- *
- * @author valer
- */
+@Entity
 public class Agendamento implements Serializable{
     
     @Id
@@ -31,6 +26,8 @@ public class Agendamento implements Serializable{
     private Time horaChegada;
     @Temporal(TemporalType.TIME)
     private Time horaSaida;
+    @OneToMany
+    private Aluno aluno;
 
     public int getId() {
         return id;
@@ -78,19 +75,31 @@ public class Agendamento implements Serializable{
 
     public void setHoraSaida(Time horaSaida) {
         this.horaSaida = horaSaida;
+        
+    }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
     
     
     @Override
     public int hashCode(){
         int hash = 7;
+        
         hash = 47 * hash + this.id;
         hash = 47 * hash + Objects.hashCode(this.nome);
         hash = 47 * hash + Objects.hashCode(this.descricao);
         hash = 47 * hash + Objects.hashCode(this.dataMarcada);
         hash = 47 * hash + Objects.hashCode(this.horaChegada);
         hash = 47 * hash + Objects.hashCode(this.horaSaida);
+        hash = 47 * hash + Objects.hashCode(this.aluno);
         return hash;
+        
         
     }
 
@@ -122,6 +131,9 @@ public class Agendamento implements Serializable{
             return false;
         }
         if (!Objects.equals(this.horaSaida, other.horaSaida)) {
+            return false;
+        }
+        if (!Objects.equals(this.aluno, other.aluno)) {
             return false;
         }
         return true;

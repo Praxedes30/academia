@@ -17,7 +17,6 @@ public class Mensalidade implements Serializable{
     @Id
     @GeneratedValue
     private int id;
-    private String instrutor;
     @Temporal(TemporalType.DATE)
     private Date dataVencimento;
     @Temporal(TemporalType.DATE)
@@ -33,14 +32,6 @@ public class Mensalidade implements Serializable{
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getInstrutor() {
-        return instrutor;
-    }
-
-    public void setInstrutor(String instrutor) {
-        this.instrutor = instrutor;
     }
 
     public Date getDataVencimento() {
@@ -87,7 +78,6 @@ public class Mensalidade implements Serializable{
     public int hashCode() {
         int hash = 7;
         hash = 17 * hash + this.id;
-        hash = 17 * hash + Objects.hashCode(this.instrutor);
         hash = 17 * hash + Objects.hashCode(this.dataVencimento);
         hash = 17 * hash + Objects.hashCode(this.dataPagamento);
         hash = 17 * hash + Objects.hashCode(this.tipoPagamento);
@@ -114,9 +104,6 @@ public class Mensalidade implements Serializable{
         if (Double.doubleToLongBits(this.valorPagamento) != Double.doubleToLongBits(other.valorPagamento)) {
             return false;
         }
-        if (!Objects.equals(this.instrutor, other.instrutor)) {
-            return false;
-        }
         if (!Objects.equals(this.tipoPagamento, other.tipoPagamento)) {
             return false;
         }
@@ -135,7 +122,7 @@ public class Mensalidade implements Serializable{
 
     @Override
     public String toString() {
-        return "Mensalidade{" + "id=" + id + ", instrutor=" + instrutor + ", dataVencimento=" + dataVencimento + ", dataPagamento=" + dataPagamento + '}';
+        return "Mensalidade{" + "id=" + id + ", dataVencimento=" + dataVencimento + ", dataPagamento=" + dataPagamento + '}';
     }
 
     

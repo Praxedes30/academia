@@ -5,14 +5,17 @@ import br.com.pm.dao.AlunoDAO;
 import br.com.pm.vo.Aluno;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
 public class AlunoBean{
     
   private Aluno aluno;
+  private Aluno alunoSelecionado;
   private List<Aluno> lista;
   private List<Aluno> listaFiltrada;
   public AlunoBean(){
@@ -20,6 +23,15 @@ public class AlunoBean{
       lista= new AlunoDAO().listarTudo();
       listaFiltrada= new ArrayList<Aluno>();
   }
+
+    public Aluno getAlunoSelecionado() {
+        return alunoSelecionado;
+    }
+
+    public void setAlunoSelecionado(Aluno alunoSelecionado) {
+        this.alunoSelecionado = alunoSelecionado;
+    }
+   
 
     public List<Aluno> getLista() {
         return lista;
@@ -51,14 +63,15 @@ public class AlunoBean{
         return "index.xhtml";
     }
     
-    public String remover(){
-        new AlunoDAO().remover(this.aluno);
-        return "listAluno.xhtml";
-    }
-    
     public List<Aluno> listar(){
      return  new AlunoDAO().listarTudo();
         
     }
-
+    
+    public void remover() {
+        new AlunoDAO().remover(alunoSelecionado);
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Removido com sucesso", "O aluno"+alunoSelecionado.getNome()+"foi removido.");
+        FacesContext.getCurrentInstance().addMessage(null, message);
+        lista=new AlunoDAO().listarTudo();
+    }
 }
