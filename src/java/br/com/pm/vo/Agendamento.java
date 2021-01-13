@@ -85,22 +85,18 @@ public class Agendamento implements Serializable{
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
     }
-    
-    
+
     @Override
-    public int hashCode(){
+    public int hashCode() {
         int hash = 7;
-        
-        hash = 47 * hash + this.id;
-        hash = 47 * hash + Objects.hashCode(this.nome);
-        hash = 47 * hash + Objects.hashCode(this.descricao);
-        hash = 47 * hash + Objects.hashCode(this.dataMarcada);
-        hash = 47 * hash + Objects.hashCode(this.horaChegada);
-        hash = 47 * hash + Objects.hashCode(this.horaSaida);
-        hash = 47 * hash + Objects.hashCode(this.aluno);
+        hash = 97 * hash + this.id;
+        hash = 97 * hash + Objects.hashCode(this.nome);
+        hash = 97 * hash + Objects.hashCode(this.descricao);
+        hash = 97 * hash + Objects.hashCode(this.dataMarcada);
+        hash = 97 * hash + Objects.hashCode(this.horaChegada);
+        hash = 97 * hash + Objects.hashCode(this.horaSaida);
+        hash = 97 * hash + Objects.hashCode(this.aluno);
         return hash;
-        
-        
     }
 
     @Override
@@ -138,8 +134,19 @@ public class Agendamento implements Serializable{
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Agendamento{" + "id=" + id + ", nome=" + nome + ", dataMarcada=" + dataMarcada + ", aluno=" + aluno + '}';
+    }
+    
+    
+    
+        
+    }
+
     
     
     
     
-}
+

@@ -1,5 +1,6 @@
 
 import br.com.pm.dao.AlunoDAO;
+import br.com.pm.dao.HibernateUtil;
 import br.com.pm.vo.Aluno;
 import java.util.Date;
 
@@ -17,6 +18,7 @@ public class Teste {
         d.setNomeCE("bbb");
         d.setEnderecoCE("bababa");
         d.setTelefoneCE("1212");
+        
         
         new AlunoDAO().salvar(d);
         
