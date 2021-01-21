@@ -2,7 +2,6 @@
 package br.com.pm.vo;
 
 import java.io.Serializable;
-import java.sql.Time;
 import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Entity;

@@ -31,32 +31,22 @@
             <p:growl id="messages"/>
  
             <p:menubar>
-        <p:submenu label="Alunos" >
-            <p:menuitem value="Cadastrar Aluno" url="addAluno.xhtml" /> 
-            <p:separator/>
-            <p:menuitem value="Alunos Matriculados" url="listAluno.xhtml" />
-        </p:submenu>
-                
         <p:submenu label="Agendamento">
             <p:menuitem value="Agendar Horário" url="addAgendamento.xhtml"/>
             <p:separator/>
             <p:menuitem value="Agenda" url="listAgendamento.xhtml"/>
         </p:submenu>
+                
+        <p:submenu label="Alunos" >
+            <p:menuitem value="Cadastrar Aluno" url="addAluno.xhtml" /> 
+            <p:separator/>
+            <p:menuitem value="Alunos Matriculados" url="listAluno.xhtml" />
+        </p:submenu>       
  
         <p:submenu label="Mensalidades" >
             <p:menuitem value="Data de Pagamento" url="#"  />
             <p:separator />
             <p:menuitem value="Data de Vencimento" url="#"  />
-        </p:submenu>
- 
-        <p:submenu label="Ajuda" >
-            <p:menuitem value="Conteúdo" url="#" />
-            <p:submenu label="Pesquisa" >
-                <p:submenu label="Texto">
-                    <p:menuitem value="Área de trabalho" url="#" />
-                </p:submenu>
-                    <p:menuitem value="Arquivo" url="#" />
-            </p:submenu>
         </p:submenu>
      
     </p:menubar>

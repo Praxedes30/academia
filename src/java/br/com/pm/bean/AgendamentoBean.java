@@ -69,4 +69,11 @@ public class AgendamentoBean {
         
     }
     
+    public void remover() {
+        new AgendamentoDAO().remover(agendamentoSelecionado);
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Removido com sucesso", "O agendamento"+agendamentoSelecionado.getNome()+"foi removido.");
+        FacesContext.getCurrentInstance().addMessage(null, message);
+        lista=new AgendamentoDAO().listarTudo();
+    }
+    
 }
