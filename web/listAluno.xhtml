@@ -8,18 +8,19 @@
     </h:head>
     <h:body>
         <h:form>  
+            <p:button icon="arrow-back-outline" href="index.xhtml"></p:button>
             <p:growl id="message" showDetail="true" />
     
          
             <p:dataTable var="aluno" value="#{alunoBean.lista}"  rows="25"
-                 paginator="true"
+                 paginator="true" id="table"
                  paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                  currentPageReportTemplate="{startRecord}-{endRecord} de {totalRecords} alunos"
                  rowsPerPageTemplate="1,10,25"
                  emptyMessage="Não foi encontrado nenhum aluno com essas especificações" 
                  filteredValue="#{alunoBean.listaFiltrada}"
                  selectionMode="single" selection="#{alunoBean.alunoSelecionado}" rowKey="#{aluno.id}"
-                > 
+                >
             <p:column headerText="Id">
                 <h:outputText value="#{aluno.id}" />
             </p:column>                

@@ -9,7 +9,8 @@
     <h:body>
         <h:form>
             <h3>Adicionar Horário</h3>
-             <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
+            <p:button icon="arrow-back-outline" href="index.xhtml"></p:button>
+            <p:panelGrid columns="4" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4" contentStyleClass="p-align-baseline ui-fluid">
                 <p:outputLabel for = "nome" value = "Nome:"/>
                 <p:inputText id = "nome" value="#{agendamentoBean.agendamento.nome}"/>
                 

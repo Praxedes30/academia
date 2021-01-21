@@ -8,7 +8,7 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -23,10 +23,10 @@ public class Agendamento implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date dataMarcada;
     @Temporal(TemporalType.TIME)
-    private Time horaChegada;
+    private Date horaChegada;
     @Temporal(TemporalType.TIME)
-    private Time horaSaida;
-    @OneToMany
+    private Date horaSaida;
+    @ManyToOne
     private Aluno aluno;
 
     public int getId() {
@@ -61,21 +61,20 @@ public class Agendamento implements Serializable{
         this.dataMarcada = dataMarcada;
     }
 
-    public Time getHoraChegada() {
+    public Date getHoraChegada() {
         return horaChegada;
     }
 
-    public void setHoraChegada(Time horaChegada) {
+    public void setHoraChegada(Date horaChegada) {
         this.horaChegada = horaChegada;
     }
 
-    public Time getHoraSaida() {
+    public Date getHoraSaida() {
         return horaSaida;
     }
 
-    public void setHoraSaida(Time horaSaida) {
+    public void setHoraSaida(Date horaSaida) {
         this.horaSaida = horaSaida;
-        
     }
 
     public Aluno getAluno() {
@@ -137,7 +136,7 @@ public class Agendamento implements Serializable{
 
     @Override
     public String toString() {
-        return "Agendamento{" + "id=" + id + ", nome=" + nome + ", dataMarcada=" + dataMarcada + ", aluno=" + aluno + '}';
+        return nome;
     }
     
     

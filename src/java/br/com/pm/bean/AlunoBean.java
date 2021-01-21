@@ -34,6 +34,7 @@ public class AlunoBean{
    
 
     public List<Aluno> getLista() {
+        lista= new AlunoDAO().listarTudo();
         return lista;
     }
 

@@ -5,8 +5,10 @@ import br.com.pm.dao.AgendamentoDAO;
 import br.com.pm.vo.Agendamento;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 
 @ManagedBean
@@ -14,6 +16,7 @@ import javax.faces.bean.SessionScoped;
 public class AgendamentoBean {
     
     private Agendamento agendamento;
+    private Agendamento agendamentoSelecionado;
     private List<Agendamento> lista;
     private List<Agendamento> listaFiltrada;
     public AgendamentoBean(){
@@ -21,6 +24,15 @@ public class AgendamentoBean {
       lista= new AgendamentoDAO().listarTudo();
       listaFiltrada= new ArrayList<Agendamento>();
   }
+
+    public Agendamento getAgendamentoSelecionado() {
+        return agendamentoSelecionado;
+    }
+
+    public void setAgendamentoSelecionado(Agendamento agendamentoSelecionado) {
+        this.agendamentoSelecionado = agendamentoSelecionado;
+    }
+    
 
     public Agendamento getAgendamento() {
         return agendamento;
@@ -31,6 +43,7 @@ public class AgendamentoBean {
     }
 
     public List<Agendamento> getLista() {
+        lista= new AgendamentoDAO().listarTudo();
         return lista;
     }
 
